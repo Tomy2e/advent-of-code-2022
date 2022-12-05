@@ -106,7 +106,7 @@ func main() {
 		totalScore += int(player) + int(outcome(opponent, player))
 	}
 
-	fmt.Printf("Part one: %d\n", totalScore)
+	fmt.Printf("Part one: %d\n", totalScore) // Part one: 11475
 
 	// Part two.
 	totalScore = 0
@@ -119,5 +119,5 @@ func main() {
 		totalScore += int(player) + int(desiredOutcome)
 	}
 
-	fmt.Printf("Part two: %d\n", totalScore)
+	fmt.Printf("Part two: %d\n", totalScore) // Part two: 16862
 }

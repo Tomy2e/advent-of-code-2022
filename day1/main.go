@@ -3,10 +3,10 @@ package main
 import (
 	_ "embed"
 	"fmt"
-	"log"
 	"sort"
-	"strconv"
 	"strings"
+
+	"github.com/Tomy2e/advent-of-code-2022/common"
 )
 
 //go:embed input.txt
@@ -26,16 +26,11 @@ func main() {
 			continue
 		}
 
-		cal, err := strconv.Atoi(line)
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		calories += cal
+		calories += common.MustAtoi(line)
 	}
 
 	sort.Sort(sort.Reverse(sort.IntSlice(elves)))
 
-	fmt.Printf("Part one: %d\n", elves[0])
-	fmt.Printf("Part two: %d\n", elves[0]+elves[1]+elves[2])
+	fmt.Printf("Part one: %d\n", elves[0])                   // Part one: 75501
+	fmt.Printf("Part two: %d\n", elves[0]+elves[1]+elves[2]) // Part two: 215594
 }

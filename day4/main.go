@@ -3,8 +3,9 @@ package main
 import (
 	_ "embed"
 	"fmt"
-	"strconv"
 	"strings"
+
+	"github.com/Tomy2e/advent-of-code-2022/common"
 )
 
 //go:embed input.txt
@@ -12,15 +13,8 @@ var input string
 
 func parseAssignment(assignment string) (int, int) {
 	bounds := strings.Split(assignment, "-")
-	low, err := strconv.Atoi(bounds[0])
-	if err != nil {
-		panic(err)
-	}
-
-	high, err := strconv.Atoi(bounds[1])
-	if err != nil {
-		panic(err)
-	}
+	low := common.MustAtoi(bounds[0])
+	high := common.MustAtoi(bounds[1])
 
 	return low, high
 }
@@ -62,6 +56,6 @@ func main() {
 		lines = strings.Split(input, "\n")
 	)
 
-	fmt.Printf("Part one: %d\n", part1(lines))
-	fmt.Printf("Part two: %d\n", part2(lines))
+	fmt.Printf("Part one: %d\n", part1(lines)) // Part one: 524
+	fmt.Printf("Part two: %d\n", part2(lines)) // Part two: 798
 }

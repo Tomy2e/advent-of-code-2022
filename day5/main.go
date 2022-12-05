@@ -49,7 +49,7 @@ func (s Stack) Reverse() {
 func expandStacks(stacks []Stack, size int) []Stack {
 	l := len(stacks)
 	if l < size {
-		for i := 0; i <= size-l; i++ {
+		for i := 0; i < size-l; i++ {
 			stacks = append(stacks, make(Stack, 0))
 		}
 	}
@@ -151,9 +151,7 @@ func stacksToString(stacks []Stack) string {
 	sb := strings.Builder{}
 
 	for _, stack := range stacks {
-		if len(stack) > 0 {
-			sb.WriteByte(stack.Peek())
-		}
+		sb.WriteByte(stack.Peek())
 	}
 
 	return sb.String()
@@ -183,6 +181,6 @@ func main() {
 		lines = strings.Split(input, "\n")
 	)
 
-	fmt.Printf("Part one: %s\n", part1(lines))
-	fmt.Printf("Part two: %s\n", part2(lines))
+	fmt.Printf("Part one: %s\n", part1(lines)) // Part one: FRDSQRRCD
+	fmt.Printf("Part two: %s\n", part2(lines)) // Part two: HRFTQVWNN
 }

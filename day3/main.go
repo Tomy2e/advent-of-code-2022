@@ -55,6 +55,6 @@ func main() {
 		lines = strings.Split(input, "\n")
 	)
 
-	fmt.Printf("Part one: %d\n", part1(lines))
-	fmt.Printf("Part two: %d\n", part2(lines))
+	fmt.Printf("Part one: %d\n", part1(lines)) // Part one: 7967
+	fmt.Printf("Part two: %d\n", part2(lines)) // Part two: 2716
 }
