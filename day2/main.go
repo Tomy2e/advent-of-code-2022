@@ -116,7 +116,7 @@ func main() {
 		opponent := NewShape(cols[0][0])
 		desiredOutcome := NewOutcome(cols[1][0])
 		player := outcomePlay(opponent, desiredOutcome)
-		totalScore += int(player) + int(outcome(opponent, player))
+		totalScore += int(player) + int(desiredOutcome)
 	}
 
 	fmt.Printf("Part two: %d\n", totalScore)
