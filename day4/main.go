@@ -40,10 +40,7 @@ func part2(lines []string) (total int) {
 		firstLow, firstHigh := parseAssignment(assignments[0])
 		secondLow, secondHigh := parseAssignment(assignments[1])
 
-		if secondLow >= firstLow && secondLow <= firstHigh ||
-			secondHigh >= firstLow && secondHigh <= firstHigh ||
-			firstLow >= secondLow && firstLow <= secondHigh ||
-			firstHigh >= secondLow && firstHigh <= secondHigh {
+		if firstHigh >= secondLow && firstLow <= secondHigh {
 			total++
 		}
 	}
