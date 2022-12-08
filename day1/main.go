@@ -4,7 +4,6 @@ import (
 	_ "embed"
 	"fmt"
 	"sort"
-	"strings"
 
 	"github.com/Tomy2e/advent-of-code-2022/common"
 )
@@ -14,7 +13,7 @@ var input string
 
 func main() {
 	var (
-		lines    = strings.Split(input, "\n")
+		lines    = common.Lines(input)
 		elves    = make([]int, 0)
 		calories = 0
 	)

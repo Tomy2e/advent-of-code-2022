@@ -4,7 +4,6 @@ import (
 	_ "embed"
 	"fmt"
 	"math"
-	"strings"
 
 	"github.com/Tomy2e/advent-of-code-2022/common"
 )
@@ -153,7 +152,7 @@ func part2(trees [][]int) (max int) {
 
 func main() {
 	var (
-		lines = strings.Split(input, "\n")
+		lines = common.Lines(input)
 	)
 
 	trees := parseInput(lines)

@@ -139,7 +139,7 @@ func part2(dirs map[string]int) (min int) {
 
 func main() {
 	var (
-		lines = strings.Split(input, "\n")
+		lines = common.Lines(input)
 	)
 
 	dirs := parseInput(lines)

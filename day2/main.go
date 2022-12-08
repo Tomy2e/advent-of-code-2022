@@ -4,6 +4,8 @@ import (
 	_ "embed"
 	"fmt"
 	"strings"
+
+	"github.com/Tomy2e/advent-of-code-2022/common"
 )
 
 //go:embed input.txt
@@ -94,7 +96,7 @@ func outcomePlay(opponent Shape, outcome Outcome) Shape {
 
 func main() {
 	var (
-		lines      = strings.Split(input, "\n")
+		lines      = common.Lines(input)
 		totalScore = 0
 	)
 

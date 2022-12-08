@@ -50,7 +50,7 @@ func part2(lines []string) (total int) {
 
 func main() {
 	var (
-		lines = strings.Split(input, "\n")
+		lines = common.Lines(input)
 	)
 
 	fmt.Printf("Part one: %d\n", part1(lines)) // Part one: 524

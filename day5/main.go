@@ -178,7 +178,7 @@ func part2(lines []string) string {
 
 func main() {
 	var (
-		lines = strings.Split(input, "\n")
+		lines = common.Lines(input)
 	)
 
 	fmt.Printf("Part one: %s\n", part1(lines)) // Part one: FRDSQRRCD

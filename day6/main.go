@@ -4,7 +4,8 @@ import (
 	"bytes"
 	_ "embed"
 	"fmt"
-	"strings"
+
+	"github.com/Tomy2e/advent-of-code-2022/common"
 )
 
 //go:embed input.txt
@@ -63,10 +64,9 @@ func part1and2(line string, distinctCharacters int) int {
 
 func main() {
 	var (
-		lines = strings.Split(input, "\n")
+		lines = common.Lines(input)
 	)
 
 	fmt.Printf("Part one: %d\n", part1and2(lines[0], 4))  // Part one: 1262
 	fmt.Printf("Part two: %d\n", part1and2(lines[0], 14)) // Part two: 3444
-
 }
