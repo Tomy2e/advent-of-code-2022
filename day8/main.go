@@ -3,7 +3,6 @@ package main
 import (
 	_ "embed"
 	"fmt"
-	"math"
 
 	"github.com/Tomy2e/advent-of-code-2022/common"
 )
@@ -83,7 +82,7 @@ func checkHorizontalView(trees [][]int, i, j int) (left, right int) {
 		}
 
 		if trees[i][k] >= trees[i][j] {
-			*current = int(math.Abs(float64(j - k)))
+			*current = common.Abs(j - k)
 
 			if k > j {
 				break
@@ -109,7 +108,7 @@ func checkVerticalView(trees [][]int, i, j int) (top, bottom int) {
 		}
 
 		if trees[k][j] >= trees[i][j] {
-			*current = int(math.Abs(float64(i - k)))
+			*current = common.Abs(i - k)
 
 			if k > i {
 				break
